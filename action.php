@@ -17,7 +17,7 @@ class action_plugin_autostartpage extends DokuWiki_Action_Plugin {
      * @param Doku_Event_Handler $controller DokuWiki's event controller object
      * @return void
      */
-    public function register(Doku_Event_Handler &$controller) {
+    public function register(Doku_Event_Handler $controller) {
        $controller->register_hook('IO_NAMESPACE_CREATED', 'AFTER', $this, 'autostartpage_handle');
     }
 
